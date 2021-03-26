@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Switch, Route } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
-function App() {
+import userService from "./services/user.service";
+
+import { setUser } from "./reducers/userReducer";
+
+import { Login } from "./pages";
+
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const loggedUserJSON = window.localStorage.getItem("loggedUser");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      dispatch(setUser(user));
+
+      userService.setToken(user.token);
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Switch>
+        <Route path="/login" component={Login}></Route>
+      </Switch>
+    </>
   );
-}
+};
 
 export default App;
