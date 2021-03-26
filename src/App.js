@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import userService from "./services/user.service";
@@ -7,6 +7,8 @@ import userService from "./services/user.service";
 import { setUser } from "./reducers/userReducer";
 
 import { Login } from "./pages";
+
+import { PublicRoute } from "./routes";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -23,7 +25,7 @@ const App = () => {
   return (
     <>
       <Switch>
-        <Route path="/login" component={Login}></Route>
+        <PublicRoute path="/login" component={Login}></PublicRoute>
       </Switch>
     </>
   );
