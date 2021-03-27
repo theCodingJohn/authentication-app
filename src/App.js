@@ -7,9 +7,9 @@ import userService from "./services/user.service";
 import { setUser } from "./reducers/authReducer";
 import { getUser } from "./reducers/userReducer";
 
-import { Login } from "./pages";
+import { Login, UserProfile } from "./pages";
 
-import { PublicRoute } from "./routes";
+import { PublicRoute, PrivateRoute } from "./routes";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -33,6 +33,7 @@ const App = () => {
     <>
       <Switch>
         <PublicRoute path="/login" component={Login}></PublicRoute>
+        <PrivateRoute path="/user" component={UserProfile}></PrivateRoute>
       </Switch>
     </>
   );
