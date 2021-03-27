@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 
 import userService from "./services/user.service";
 
-import { setUser } from "./reducers/userReducer";
+import { setUser } from "./reducers/authReducer";
+import { getUser } from "./reducers/userReducer";
 
 import { Login } from "./pages";
 
@@ -14,14 +15,20 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const loggedUserJSON = window.localStorage.getItem("loggedUser");
-    if (loggedUserJSON) {
-      const user = JSON.parse(loggedUserJSON);
-      dispatch(setUser(user));
+    const getLocalStorageData = async () => {
+      const loggedUserJSON = window.localStorage.getItem("loggedUser");
+      if (loggedUserJSON) {
+        const user = JSON.parse(loggedUserJSON);
+        await dispatch(setUser(user));
+        userService.setToken(user.token);
 
-      userService.setToken(user.token);
-    }
+        dispatch(getUser(user.id));
+      }
+    };
+
+    getLocalStorageData();
   }, []);
+
   return (
     <>
       <Switch>
