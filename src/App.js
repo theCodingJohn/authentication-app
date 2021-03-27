@@ -11,6 +11,8 @@ import { Login, UserProfile } from "./pages";
 
 import { PublicRoute, PrivateRoute } from "./routes";
 
+import "./app.css";
+
 const App = () => {
   const dispatch = useDispatch();
   const [id, setId] = useState(null);
