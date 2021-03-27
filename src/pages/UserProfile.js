@@ -6,7 +6,7 @@ const UserProfile = () => {
 
   const logout = () => {
     window.localStorage.removeItem("loggedUser");
-    window.location.reload(false);
+    window.location.href = "/login";
   };
 
   return (

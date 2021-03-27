@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Switch } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
@@ -13,6 +13,7 @@ import { PublicRoute, PrivateRoute } from "./routes";
 
 const App = () => {
   const dispatch = useDispatch();
+  const [id, setId] = useState(null);
 
   useEffect(() => {
     const getLocalStorageData = async () => {
@@ -21,6 +22,7 @@ const App = () => {
         const user = JSON.parse(loggedUserJSON);
         await dispatch(setUser(user));
         userService.setToken(user.token);
+        setId(user.id);
 
         dispatch(getUser(user.id));
       }
@@ -32,8 +34,11 @@ const App = () => {
   return (
     <>
       <Switch>
-        <PublicRoute path="/login" component={Login}></PublicRoute>
-        <PrivateRoute path="/user" component={UserProfile}></PrivateRoute>
+        <PublicRoute exact path="/login" component={Login}></PublicRoute>
+        <PrivateRoute
+          path={`/user/${id}`}
+          component={UserProfile}
+        ></PrivateRoute>
       </Switch>
     </>
   );
