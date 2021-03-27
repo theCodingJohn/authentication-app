@@ -25,6 +25,7 @@ module.exports = {
     "no-console": 0,
     "react/prop-types": 0,
   },
+  parser: "babel-eslint",
   settings: {
     react: {
       version: "detect",
