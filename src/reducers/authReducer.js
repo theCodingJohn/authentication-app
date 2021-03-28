@@ -16,13 +16,18 @@ export const login = ({ email, password }) => {
   return async (dispatch) => {
     const user = await loginService.login({ email, password });
 
-    window.localStorage.setItem("loggedUser", JSON.stringify(user));
-    userService.setToken(user.token);
+    if (!user.error) {
+      window.localStorage.setItem("loggedUser", JSON.stringify(user));
+      window.localStorage.removeItem("formError");
+      userService.setToken(user.token);
 
-    dispatch({
-      type: "LOGIN_USER",
-      data: user,
-    });
+      dispatch({
+        type: "LOGIN_USER",
+        data: user,
+      });
+    }
+
+    window.localStorage.setItem("formError", JSON.stringify(user));
   };
 };
 
