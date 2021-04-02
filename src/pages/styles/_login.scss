@@ -1,6 +1,15 @@
-main.login {
+main.user-entry {
   position: relative;
+  display: flex;
+  place-content: center center;
   height: 100vh;
+
+  .card {
+    width: 100%;
+    max-width: 29.614rem;
+    margin: auto;
+  }
+
   .logo-container {
     padding-top: 1.077rem;
     .logo {
@@ -50,12 +59,26 @@ main.login {
   footer {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0.625rem;
-    width: calc(100vw - 1.157rem);
+    margin-top: 2.5rem;
+  }
+}
 
-    span {
-      margin-right: 1.157rem;
+@media (min-width: $s) {
+  main.user-entry {
+    .card {
+      padding: 3.026rem 58.784px 2.717rem 3.674rem;
+      height: 39.644rem;
+      border: 1.008px solid rgba(189, 189, 189, 1);
+      border-radius: 1.5rem;
+    }
+
+    .logo-container {
+      padding-top: 0;
+    }
+
+    footer {
+      display: none;
+      margin: auto;
     }
   }
 }
