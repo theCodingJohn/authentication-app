@@ -45,7 +45,13 @@ const LoginForm = () => {
     <form onSubmit={handleSubmit(loginUser)} noValidate>
       {error && <FormError message={error.error} />}
       <InputWrapper>
-        <Input type="email" ref={register} placeholder="email" name="email" />
+        <Input
+          color={errors.password ? "#d44950" : "#bdbdbd"}
+          type="email"
+          ref={register}
+          placeholder="email"
+          name="email"
+        />
         <EmailSvg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -60,6 +66,7 @@ const LoginForm = () => {
       {errors.email?.message && <FormError message={errors.email.message} />}
       <InputWrapper>
         <Input
+          color={errors.password ? "#d44950" : "#bdbdbd"}
           type="password"
           ref={register}
           placeholder="password"
@@ -92,7 +99,7 @@ const InputWrapper = styled.div`
 const Input = styled.input`
   width: 100%;
   height: 100%;
-  border: 1px solid #bdbdbd;
+  border: 1px solid ${(props) => props.color};
   border-radius: 0.5rem;
   padding: 0 2rem 0 2.931rem;
   font-size: 1rem;
