@@ -110,7 +110,7 @@ main.user-entry footer {
 @media (min-width: 576px) {
   main.user-entry .card {
     padding: 3.026rem 58.784px 2.717rem 3.674rem;
-    height: 39.644rem;
+    min-height: 39.644rem;
     border: 1.008px solid #bdbdbd;
     border-radius: 1.5rem;
   }

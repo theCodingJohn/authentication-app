@@ -6,15 +6,11 @@ const FormError = ({ message }) => {
 };
 
 const Error = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #d44950;
-  color: white;
-  height: 30px;
-  border-radius: 8px;
-  text-align: center;
-  margin-bottom: 8px;
+  margin-top: -12px;
+  margin-bottom: 10px;
+  color: #d44950;
+  font-size: 14px;
+  margin-left: 3px;
 `;
 
 export default FormError;
