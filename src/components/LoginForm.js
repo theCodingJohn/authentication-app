@@ -90,13 +90,13 @@ const LoginForm = () => {
   );
 };
 
-const InputWrapper = styled.div`
+export const InputWrapper = styled.div`
   position: relative;
   height: 3rem;
   margin-bottom: 0.906rem;
 `;
 
-const Input = styled.input`
+export const Input = styled.input`
   width: 100%;
   height: 100%;
   border: 1px solid ${(props) => props.color};
@@ -115,7 +115,7 @@ const Input = styled.input`
   }
 `;
 
-const EmailSvg = styled.svg`
+export const EmailSvg = styled.svg`
   position: absolute;
   left: 14px;
   top: 0;
@@ -126,12 +126,12 @@ const EmailSvg = styled.svg`
   fill: rgba(130, 130, 130, 1);
 `;
 
-const PasswordSvg = styled(EmailSvg)`
+export const PasswordSvg = styled(EmailSvg)`
   width: 16px;
   height: 21px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   background-color: rgba(47, 128, 237, 1);
   cursor: pointer;
   width: 100%;

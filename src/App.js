@@ -7,7 +7,7 @@ import userService from "./services/user.service";
 import { setUser } from "./reducers/authReducer";
 import { getUser } from "./reducers/userReducer";
 
-import { Login, UserProfile } from "./pages";
+import { Login, UserProfile, Register } from "./pages";
 
 import { PublicRoute, PrivateRoute } from "./routes";
 
@@ -37,6 +37,7 @@ const App = () => {
     <>
       <Switch>
         <PublicRoute exact path="/login" component={Login}></PublicRoute>
+        <PublicRoute exact path="/register" component={Register}></PublicRoute>
         <PrivateRoute
           path={`/user/${id}`}
           component={UserProfile}

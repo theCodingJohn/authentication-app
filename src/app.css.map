@@ -6,7 +6,7 @@
         "styles/_variables.scss",
         "styles/_resets.scss",
         "styles/_typography.scss",
-        "pages/styles/_login.scss"
+        "pages/styles/_user-entry.scss"
     ],
     "names": [],
     "file": "app.css"
