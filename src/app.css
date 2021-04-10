@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h1 {
+  line-height: 1.532rem;
+  font-size: 1.125rem;
+}
+
+p {
+  line-height: 1.362rem;
+}
+
+main.user-entry {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center center;
+  height: 100vh;
+}
+
+main.user-entry .card {
+  width: 100%;
+  max-width: 29.614rem;
+  margin: auto;
+}
+
+main.user-entry .logo-container {
+  padding-top: 1.077rem;
+}
+
+main.user-entry .logo-container .logo {
+  width: 8.136rem;
+  height: 1.125rem;
+}
+
+main.user-entry .body-container h1 {
+  margin: 1.716rem 0 0.906rem 0;
+}
+
+main.user-entry .body-container p {
+  margin-bottom: 2.166rem;
+}
+
+main.user-entry .body-container .icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.966rem;
+}
+
+main.user-entry .body-container .icons-container .callback {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+main.user-entry .body-container .icons-container .callback:hover {
+  text-decoration: underline;
+}
+
+main.user-entry .body-container .icons-container .icons-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.407rem 0 1.692rem 0;
+}
+
+main.user-entry .body-container .icons-container .icons-wrapper a {
+  cursor: pointer;
+  margin: 0 calc(1.308rem / 2);
+}
+
+main.user-entry footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 576px) {
+  main.user-entry .card {
+    padding: 3.026rem 58.784px 2.717rem 3.674rem;
+    min-height: 39.644rem;
+    border: 1.008px solid #bdbdbd;
+    border-radius: 1.5rem;
+  }
+  main.user-entry .logo-container {
+    padding-top: 0;
+  }
+  main.user-entry footer {
+    display: none;
+    margin: auto;
+  }
+}
+/*# sourceMappingURL=app.css.map */
