@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Nav } from "../components";
 
 const UserProfile = () => {
   const user = useSelector(({ userData }) => userData);
@@ -10,13 +11,14 @@ const UserProfile = () => {
   };
 
   return (
-    <div>
+    <>
+      <Nav />
       <img src={user.avatar}></img>
       <div>{user.email}</div>
       <button onClick={logout} type="button">
         logout
       </button>
-    </div>
+    </>
   );
 };
 

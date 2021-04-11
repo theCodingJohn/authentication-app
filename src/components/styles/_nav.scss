@@ -1,0 +1,61 @@
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 51.44px;
+  padding: 1.463rem 1.754rem 0.293rem 1.157rem;
+  position: absolute;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .col2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .logo {
+    width: 8.136rem;
+    height: 1.125rem;
+  }
+
+  .profile-pic {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 8px;
+  }
+
+  .name {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .drop-down {
+    cursor: pointer;
+  }
+
+  .drop-down,
+  .name {
+    display: none;
+  }
+}
+
+@media (min-width: $m) {
+  .nav {
+    padding: 1.5rem 5.026rem 0.293rem 4.5rem;
+
+    .row .col2 {
+      width: 11.937rem;
+    }
+
+    .drop-down,
+    .name {
+      display: block;
+    }
+  }
+}
