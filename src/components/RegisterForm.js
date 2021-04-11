@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormError from "./FormError";
+import schema from "../utils/yupSchema";
 
 import {
   InputWrapper,
@@ -11,14 +11,6 @@ import {
   PasswordSvg,
   Button,
 } from "./LoginForm";
-
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  password: yup.string().required("Password is required"),
-});
 
 const RegisterForm = () => {
   const [error] = useState(null);
