@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
+import { useDispatch } from "react-redux";
 import { yupResolver } from "@hookform/resolvers/yup";
+import signup from "../services/register.service";
+import { login } from "../reducers/authReducer";
+import { getUser } from "../reducers/userReducer";
 import FormError from "./FormError";
+import schema from "../utils/yupSchema";
 
 import {
   InputWrapper,
@@ -12,22 +16,41 @@ import {
   Button,
 } from "./LoginForm";
 
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  password: yup.string().required("Password is required"),
-});
-
 const RegisterForm = () => {
-  const [error] = useState(null);
-  const { register, errors } = useForm({
+  const dispatch = useDispatch();
+  const [error, setError] = useState(null);
+  const { register, handleSubmit, errors } = useForm({
     resolver: yupResolver(schema),
   });
 
+  const registerUser = async (data) => {
+    const credentials = data;
+    const user = await signup(credentials);
+
+    if (user.error) {
+      window.localStorage.setItem("formError", JSON.stringify(user));
+    }
+
+    if (!user.error) {
+      await dispatch(login(credentials));
+    }
+
+    const formError = window.localStorage.getItem("formError");
+    if (formError) {
+      const error = JSON.parse(formError);
+      setError(error);
+    }
+
+    const loggedUserJSON = window.localStorage.getItem("loggedUser");
+    if (loggedUserJSON) {
+      const user = JSON.parse(loggedUserJSON);
+      dispatch(getUser(user.id));
+      window.location.href = `/user/${user.id}`;
+    }
+  };
+
   return (
-    <form noValidate>
+    <form onSubmit={handleSubmit(registerUser)} noValidate>
       {error && <FormError message={error.error} />}
       <InputWrapper>
         <Input

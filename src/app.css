@@ -122,4 +122,80 @@ main.user-entry footer {
     margin: auto;
   }
 }
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 51.44px;
+  padding: 1.463rem 1.754rem 0.293rem 1.157rem;
+  position: absolute;
+}
+
+.nav .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.nav .row .col2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .logo {
+  width: 8.136rem;
+  height: 1.125rem;
+}
+
+.nav .profile-pic {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 8px;
+}
+
+.nav .name {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.nav .drop-down {
+  cursor: pointer;
+}
+
+.nav .drop-down,
+.nav .name {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    padding: 1.5rem 5.026rem 0.293rem 4.5rem;
+  }
+  .nav .row .col2 {
+    width: 11.937rem;
+  }
+  .nav .drop-down,
+  .nav .name {
+    display: block;
+  }
+}
 /*# sourceMappingURL=app.css.map */

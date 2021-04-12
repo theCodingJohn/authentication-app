@@ -3,18 +3,10 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { getUser } from "../reducers/userReducer";
 import { login } from "../reducers/authReducer";
-import * as yup from "yup";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import FormError from "./FormError";
-
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  password: yup.string().required("Password is required"),
-});
+import schema from "../utils/yupSchema";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
