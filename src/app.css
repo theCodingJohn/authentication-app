@@ -131,9 +131,10 @@ main.user-entry footer {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  height: 51.44px;
+  height: 3.215rem;
   padding: 1.463rem 1.754rem 0.293rem 1.157rem;
   position: absolute;
+  top: 0;
 }
 
 .nav .row {
