@@ -8,6 +8,10 @@
           box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
 }
@@ -123,6 +127,36 @@ main.user-entry footer {
   }
 }
 
+main.user-profile h3 + span {
+  font-weight: 500;
+  font-size: 0.813rem;
+  color: #828282;
+}
+
+main.user-profile .card {
+  border-radius: 12px;
+  width: 100%;
+  max-width: 52.869rem;
+}
+
+main.user-profile .card-section {
+  padding: 17.39px 20.61px;
+}
+
+@media (min-width: 576px) {
+  main.user-profile .card {
+    border: 1px solid #e0e0e0;
+    min-height: 36.284rem;
+    margin-bottom: 271.4px;
+  }
+  main.user-profile .card-section {
+    padding: 24px 49.3px;
+  }
+  main.user-profile .password-wrapper {
+    border: none;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,7 +167,7 @@ main.user-entry footer {
   width: 100vw;
   height: 3.215rem;
   padding: 1.463rem 1.754rem 0.293rem 1.157rem;
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
