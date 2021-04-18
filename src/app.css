@@ -143,6 +143,20 @@ main.user-profile .card-section {
   padding: 17.39px 20.61px;
 }
 
+main.user-profile .card-section .title {
+  width: 30%;
+}
+
+main.user-profile .card-section .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 70%;
+}
+
 @media (min-width: 576px) {
   main.user-profile .card {
     border: 1px solid #e0e0e0;
@@ -151,6 +165,11 @@ main.user-profile .card-section {
   }
   main.user-profile .card-section {
     padding: 24px 49.3px;
+  }
+  main.user-profile .card-section .value {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   main.user-profile .password-wrapper {
     border: none;

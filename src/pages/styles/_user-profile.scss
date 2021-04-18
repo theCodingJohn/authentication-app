@@ -4,6 +4,7 @@ main.user-profile {
     font-size: 0.813rem;
     color: #828282;
   }
+
   .card {
     border-radius: 12px;
     width: 100%;
@@ -12,6 +13,16 @@ main.user-profile {
 
   .card-section {
     padding: 17.39px 20.61px;
+
+    .title {
+      width: 30%;
+    }
+
+    .value {
+      display: flex;
+      justify-content: flex-end;
+      width: 70%;
+    }
   }
 }
 
@@ -25,6 +36,10 @@ main.user-profile {
 
     .card-section {
       padding: 24px 49.3px;
+
+      .value {
+        justify-content: flex-start;
+      }
     }
 
     .password-wrapper {

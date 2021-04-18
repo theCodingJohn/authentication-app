@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "/users";
+const baseUrl = `${process.env.REACT_APP_BACKEND_LINK}/users`;
 
 let token = null;
 

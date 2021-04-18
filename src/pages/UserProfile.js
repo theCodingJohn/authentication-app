@@ -29,50 +29,50 @@ const UserProfile = () => {
           </div>
         </CardSectionHeader>
         <CardSection className="card-section">
-          <div>
+          <div className="title">
             <H4>Photo</H4>
           </div>
-          <div>
+          <div className="value">
             <Avatar src={user.avatar} />
           </div>
         </CardSection>
         <CardSection className="card-section">
-          <div>
+          <div className="title">
             <H4>Name</H4>
           </div>
-          <div>
+          <div className="value">
             <span>{user.name}</span>
           </div>
         </CardSection>
         <CardSection className="card-section">
-          <div>
+          <div className="title">
             <H4>Bio</H4>
           </div>
-          <div>
+          <div className="value">
             <Value>{user.bio}</Value>
           </div>
         </CardSection>
         <CardSection className="card-section">
-          <div>
+          <div className="title">
             <H4>Phone</H4>
           </div>
-          <div>
+          <div className="value">
             <span>{user.phone}</span>
           </div>
         </CardSection>
         <CardSection className="card-section">
-          <div>
+          <div className="title">
             <H4>Email</H4>
           </div>
-          <div>
+          <div className="value">
             <span>{user.email}</span>
           </div>
         </CardSection>
         <CardSection className="card-section password-wrapper">
-          <div>
+          <div className="title">
             <H4>Password</H4>
           </div>
-          <div>
+          <div className="value">
             <span>***********</span>
           </div>
         </CardSection>
