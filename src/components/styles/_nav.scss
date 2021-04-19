@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   width: 100vw;
-  height: 51.44px;
+  height: 3.215rem;
   padding: 1.463rem 1.754rem 0.293rem 1.157rem;
-  position: absolute;
+  position: fixed;
+  top: 0;
 
   .row {
     display: flex;
