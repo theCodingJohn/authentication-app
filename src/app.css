@@ -204,6 +204,7 @@ main.user-profile .card-section .value {
 }
 
 .nav .row .col2 {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -231,13 +232,92 @@ main.user-profile .card-section .value {
   font-weight: 700;
 }
 
-.nav .drop-down {
+.nav .drop-down,
+.nav .name,
+.nav .profile-pic {
   cursor: pointer;
 }
 
 .nav .drop-down,
 .nav .name {
   display: none;
+}
+
+.nav .nav-links-wrapper {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  width: 11.75rem;
+  height: 10.875rem;
+  bottom: -196.31px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 0.934rem 0.745rem 0.746rem 0.748rem;
+  right: 0;
+}
+
+.nav .nav-links-wrapper .row {
+  width: 10.258rem;
+  height: 2.447rem;
+  border-radius: 8px;
+  fill: #4f4f4f;
+  color: #4f4f4f;
+  cursor: pointer;
+}
+
+.nav .nav-links-wrapper .row:hover {
+  background-color: #f2f2f2;
+}
+
+.nav .nav-links-wrapper .row3 {
+  position: relative;
+  cursor: default;
+  height: 1.219rem;
+}
+
+.nav .nav-links-wrapper .row3:hover {
+  background-color: transparent;
+}
+
+.nav .nav-links-wrapper .row3 .divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 1px;
+  background-color: #e0e0e0;
+  width: 100%;
+}
+
+.nav .nav-links-wrapper .row4 {
+  color: #eb5757;
+}
+
+.nav .nav-links-wrapper .row4 svg {
+  fill: #eb5757;
+}
+
+.nav .nav-links-wrapper .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.667rem 0.834rem 0.78rem 0.834rem;
+}
+
+.nav .nav-links-wrapper p {
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+  margin-left: 0.729rem;
 }
 
 @media (min-width: 768px) {
